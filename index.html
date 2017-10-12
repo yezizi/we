@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li{
+            list-style:none;
+            width:200px;
+            white-space:nowrap;
+            text-overflow: ellipsis;
+        }
+        ul{
+            margin-top: 10%;
+            margin-left: 10%;
+        }
+        .first:before,.first:after{
+            content:"";
+            width:100%;
+            height:100%;
+            background-color: rgba(0,0,0,.2);
+            position: absolute;
+            top:0;
+            z-index:3;
+            transition: all 0.5s;
+            opacity:0;
+        }
+        .first:before{
+            left:-100%;
+        }
+        .first:after{
+            right:-100%;
+        }
+        .first{
+            position: relative;
+            width:200px;
+            display: inline-block;
+            margin-right: 200px;
+            overflow: hidden;
+            border:1px solid red;
+            background-color: yellow;
+        }
+        .first:hover.first:before{
+            left:0;
+            opacity:1;
+        }
+        .first:hover.first:after{
+            right:0;
+            opacity:1;
+        }
+        .first.q2:before,.first.q2:after{
+            background-color: rgba(96, 204, 78, 0.31);
+        }
+        .first.q3:before,.first.q3:after{
+            background-color: rgba(31, 0, 243, 0.21);
+        }
+    </style>
+</head>
+<body>
+  <ul>
+      <li>谁谁谁水水水水v</li>
+      <li>冲突和农</li>
+      <li>2授之以授之以鱼不如授之以渔授之以鱼不如授之以渔授之以鱼不如授之以渔授之以鱼不如授之以渔鱼不如授之以渔</li>
+      <li>3授之以鱼不如授之以渔eeeeeeeeeeeeeeeeeeeeeee</li>
+      <li>4授之以鱼不如授之以渔dev分支</li>
+      <li>5授之以鱼不如授之以渔</li>
+      <li>冲突失败4444444444444444</li>
+  </ul>
+   <div class="first ">
+           <img src="directory.png" width="200px">
+   </div>
+  <div class="first q2">
+      <img src="directory.png" width="200px">
+  </div>
+  <div class="first q3">
+      <img src="directory.png" width="200px">
+  </div>
+</body>
+</html>
